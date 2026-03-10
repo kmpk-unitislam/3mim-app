@@ -133,7 +133,7 @@ export default function MastautinSection() {
       className="relative w-full min-h-screen flex items-center py-20 overflow-hidden"
       style={{ backgroundColor: '#f0faf7' }}
     >
-      <audio ref={audioRef} src="/mastautin.mp4" preload="auto" />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}mastautin.mp4`} preload="auto" />
       {/* Concentric Circles Background */}
       <div
         ref={circlesRef}
@@ -160,7 +160,7 @@ export default function MastautinSection() {
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-md animate-house-float">
                 <img
-                  src="/mastautin-illustration.jpg"
+                  src={`${import.meta.env.BASE_URL}mastautin-illustration.jpg`}
                   alt="Mastautin Illustration"
                   className="w-full h-auto object-cover"
                 />

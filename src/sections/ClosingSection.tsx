@@ -161,7 +161,7 @@ export default function ClosingSection() {
         ref={bgRef}
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/closing-pattern.jpg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}closing-pattern.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0,

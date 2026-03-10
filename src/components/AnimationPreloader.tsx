@@ -409,7 +409,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
 
             {/* ---------------- SLIDE 1A: MASTAUTIN EXACT CLONE ---------------- */}
             <div ref={slide1MastautinRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 text-black opacity-0 pointer-events-none" style={{ backgroundColor: '#f0faf7' }}>
-                <audio ref={audioMastautinRef} src="/mastautin.mp4" preload="auto" />
+                <audio ref={audioMastautinRef} src={`${import.meta.env.BASE_URL}mastautin.mp4`} preload="auto" />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     {[...Array(3)].map((_, i) => (
                         <div key={i} className="concentric-circle absolute rounded-full border-2 border-teal/20" style={{ width: `${300 + i * 150}px`, height: `${300 + i * 150}px` }} />
@@ -418,7 +418,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl w-full z-10">
                     <div className="mas-img relative flex justify-center">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md">
-                            <img src="/mastautin-illustration.jpg" alt="Mastautin" className="w-full h-auto" />
+                            <img src={`${import.meta.env.BASE_URL}mastautin-illustration.jpg`} alt="Mastautin" className="w-full h-auto" />
                         </div>
                         <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-teal rounded-full flex items-center justify-center shadow-glow-teal"><Home className="w-8 h-8 text-white" /></div>
                     </div>
@@ -440,7 +440,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
 
             {/* ---------------- SLIDE 1B: MUKIM EXACT CLONE ---------------- */}
             <div ref={slide1MukimRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 text-black opacity-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f0faf7 100%)' }}>
-                <audio ref={audioMukimRef} src="/mukim.mp4" preload="auto" />
+                <audio ref={audioMukimRef} src={`${import.meta.env.BASE_URL}mukim.mp4`} preload="auto" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl w-full z-10">
                     <div className="muk-hdr order-2 lg:order-1 text-center lg:text-left">
                         <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-teal mb-2 lg:mb-4">MUKIM</h2>
@@ -455,7 +455,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
                     </div>
                     <div className="muk-img order-1 lg:order-2 relative flex justify-center">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md">
-                            <img src="/mukim-illustration.jpg" alt="Mukim" className="w-full h-auto" />
+                            <img src={`${import.meta.env.BASE_URL}mukim-illustration.jpg`} alt="Mukim" className="w-full h-auto" />
                         </div>
                         <div className="absolute -bottom-6 -left-6 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-2xl shadow-card flex items-center justify-center"><CalendarDays className="w-8 h-8 sm:w-10 sm:h-10 text-teal" /></div>
                     </div>
@@ -464,7 +464,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
 
             {/* ---------------- SLIDE 1C: MUSAFIR EXACT CLONE ---------------- */}
             <div ref={slide1MusafirRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 text-black opacity-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)' }}>
-                <audio ref={audioMusafirRef} src="/musafir.mp4" preload="auto" />
+                <audio ref={audioMusafirRef} src={`${import.meta.env.BASE_URL}musafir.mp4`} preload="auto" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl w-full z-10">
                     <div className="mus-hdr order-2 lg:order-1 text-center lg:text-left">
                         <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-teal mb-2 lg:mb-4">MUSAFIR</h2>
@@ -479,7 +479,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
                     </div>
                     <div className="mus-img order-1 lg:order-2 relative flex justify-center flex-col">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md">
-                            <img src="/musafir-illustration.jpg" alt="Musafir" className="w-full h-auto" />
+                            <img src={`${import.meta.env.BASE_URL}musafir-illustration.jpg`} alt="Musafir" className="w-full h-auto" />
                         </div>
                         <div className="absolute -bottom-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 bg-teal rounded-full flex items-center justify-center shadow-glow-teal"><Car className="w-8 h-8 sm:w-10 sm:h-10 text-white" /></div>
 

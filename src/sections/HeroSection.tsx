@@ -115,7 +115,7 @@ export default function HeroSection() {
           className="absolute animate-pattern-rotate"
           style={{
             inset: '-25%',
-            backgroundImage: 'url(/hero-pattern.jpg)',
+            backgroundImage: `url(${import.meta.env.BASE_URL}hero-pattern.jpg)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0,

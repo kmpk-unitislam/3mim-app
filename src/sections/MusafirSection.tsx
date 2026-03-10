@@ -144,7 +144,7 @@ export default function MusafirSection() {
         background: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)',
       }}
     >
-      <audio ref={audioRef} src="/musafir.mp4" preload="auto" />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}musafir.mp4`} preload="auto" />
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -233,7 +233,7 @@ export default function MusafirSection() {
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/musafir-illustration.jpg"
+                  src={`${import.meta.env.BASE_URL}musafir-illustration.jpg`}
                   alt="Musafir Illustration"
                   className="w-full h-auto object-cover"
                 />

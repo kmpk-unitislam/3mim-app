@@ -122,7 +122,7 @@ export default function MukimSection() {
         background: 'linear-gradient(135deg, #ffffff 0%, #f0faf7 100%)',
       }}
     >
-      <audio ref={audioRef} src="/mukim.mp4" preload="auto" />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}mukim.mp4`} preload="auto" />
       {/* Diagonal SVG Divider */}
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
@@ -229,7 +229,7 @@ export default function MukimSection() {
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/mukim-illustration.jpg"
+                  src={`${import.meta.env.BASE_URL}mukim-illustration.jpg`}
                   alt="Mukim Illustration"
                   className="w-full h-auto object-cover"
                 />
