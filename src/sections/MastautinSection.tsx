@@ -130,7 +130,7 @@ export default function MastautinSection() {
     <section
       id="mastautin"
       ref={sectionRef}
-      className="relative w-full min-h-screen flex items-center py-20 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center py-20 landscape:py-8 overflow-hidden"
       style={{ backgroundColor: '#f0faf7' }}
     >
       <audio ref={audioRef} src={`${import.meta.env.BASE_URL}mastautin.mp4`} preload="auto" />
@@ -152,8 +152,8 @@ export default function MastautinSection() {
         ))}
       </div>
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-16 landscape:pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 landscape:gap-6 items-center">
           {/* Left Image */}
           <div ref={imageRef} className="opacity-0">
             <div className="relative flex justify-center">
@@ -174,7 +174,7 @@ export default function MastautinSection() {
           <div className="text-center lg:text-left">
             {/* Title */}
             <div ref={titleRef} className="opacity-0 flex items-center justify-center lg:justify-start gap-4 mb-4">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-teal">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl landscape:text-4xl font-display font-bold text-teal">
                 MASTAUTIN
               </h2>
               <div className="relative">
@@ -193,7 +193,7 @@ export default function MastautinSection() {
                 </button>
               </div>
             </div>
-            <p className="text-xl text-gold font-display mb-8">
+            <p className="text-xl landscape:text-base text-gold font-display mb-8 landscape:mb-4">
               Tempat Tinggal Tetap
             </p>
             {/* Definition */}

@@ -117,7 +117,7 @@ export default function MukimSection() {
     <section
       id="mukim"
       ref={sectionRef}
-      className="relative w-full min-h-screen flex items-center py-20 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center py-20 landscape:py-8 overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #ffffff 0%, #f0faf7 100%)',
       }}
@@ -146,13 +146,13 @@ export default function MukimSection() {
         </defs>
       </svg>
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-16 landscape:pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 landscape:gap-6 items-center">
           {/* Left Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 md:order-1">
             {/* Title */}
             <div ref={titleRef} className="opacity-0 flex items-center gap-4 mb-4">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-teal">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl landscape:text-4xl font-display font-bold text-teal">
                 MUKIM
               </h2>
               <div className="relative">
@@ -171,7 +171,7 @@ export default function MukimSection() {
                 </button>
               </div>
             </div>
-            <p className="text-xl text-gold font-display mb-8">
+            <p className="text-xl landscape:text-base text-gold font-display mb-8 landscape:mb-4">
               Tinggal Sementara
             </p>
 
@@ -215,7 +215,7 @@ export default function MukimSection() {
           </div>
 
           {/* Right Image */}
-          <div ref={imageRef} className="order-1 lg:order-2 opacity-0">
+          <div ref={imageRef} className="order-1 md:order-2 opacity-0">
             <div className="relative">
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">

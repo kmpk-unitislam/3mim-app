@@ -205,7 +205,7 @@ export default function ClosingSection() {
       <div className="relative z-10 flex flex-col flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Main Center Content */}
-        <div className="flex-1 flex flex-col justify-end text-center pb-8 pt-24 lg:pt-32">
+        <div className="flex-1 flex flex-col justify-end text-center pb-8 landscape:pb-4 pt-24 lg:pt-32 landscape:pt-12">
           {/* Sparkle Decoration */}
           <div className="flex justify-center mb-6 mt-auto">
             <Sparkles className="w-10 h-10 text-gold animate-icon-pulse" />
@@ -238,7 +238,7 @@ export default function ClosingSection() {
         </div>
 
         {/* Footer Pinned to Bottom */}
-        <div className="w-full pb-8 mt-auto flex flex-col items-center">
+        <div className="w-full pb-8 landscape:pb-3 mt-auto flex flex-col items-center">
 
           {/* CTA Buttons */}
           <div ref={buttonsRef} className="flex flex-wrap justify-center gap-4 mb-8">

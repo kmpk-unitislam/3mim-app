@@ -583,7 +583,7 @@ export default function SituasiPerjalananSection() {
     <section
       id="situasi-perjalanan"
       ref={sectionRef}
-      className="relative min-h-screen flex items-center py-20 overflow-hidden"
+      className="relative min-h-screen flex items-center py-20 landscape:py-8 overflow-hidden"
       style={{ backgroundColor: '#f0faf7' }}
     >
       {/* Background Pattern */}
@@ -597,8 +597,8 @@ export default function SituasiPerjalananSection() {
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
-        <div ref={titleRef} className="text-center mb-12 opacity-0">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-teal mb-4">
+        <div ref={titleRef} className="text-center mb-12 landscape:mb-4 opacity-0">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl landscape:text-3xl font-display font-bold text-teal mb-4 landscape:mb-2">
             SITUASI PERJALANAN
           </h2>
           <p className="text-xl text-gray-600 font-display max-w-2xl mx-auto">
@@ -610,7 +610,7 @@ export default function SituasiPerjalananSection() {
         </div>
 
         {/* Scenario Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 landscape:gap-2 mb-12 landscape:mb-4">
           {scenarios.map((scenario) => (
             <Button
               key={scenario.id}
@@ -638,7 +638,7 @@ export default function SituasiPerjalananSection() {
 
         {/* Active Scenario Description */}
         <div className="text-center mb-8">
-          <div className="inline-block bg-white rounded-2xl px-8 py-4 shadow-card border border-teal/10">
+          <div className="inline-block bg-white rounded-2xl px-8 py-4 landscape:px-5 landscape:py-2 shadow-card border border-teal/10">
             <p className="text-lg text-gray-700">
               <span className="font-semibold text-teal">
                 {scenarios[activeScenario - 1].title}:
@@ -651,7 +651,7 @@ export default function SituasiPerjalananSection() {
         {/* Mind Map Visualization */}
         <div
           ref={mapRef}
-          className="relative mx-auto max-w-3xl opacity-0"
+          className="relative mx-auto max-w-3xl landscape:max-w-lg opacity-0"
         >
           <div className="relative aspect-square max-w-2xl mx-auto">
             {/* Main Circle Background */}

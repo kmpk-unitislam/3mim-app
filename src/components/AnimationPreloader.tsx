@@ -377,60 +377,60 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
             <div className="absolute inset-0 bg-[linear-gradient(160deg,#012b25_0%,#024c44_50%,#01201b_100%)] opacity-80" />
 
             {/* ---------------- SLIDE 0: MAIN OPENING ---------------- */}
-            <div ref={slide0Ref} className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center pointer-events-none text-white">
-                <div className="anim-item text-gold font-serif text-[clamp(1.3rem,4vw,2rem)] mb-3" style={{ textShadow: '0 0 24px rgba(212,175,55,0.4)' }}>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
-                <div className="anim-item font-display text-[clamp(2.5rem,7vw,4.5rem)] font-bold tracking-[0.12em]" style={{ textShadow: '0 0 30px rgba(212,175,55,0.3)' }}>PETA MUKA</div>
-                <div className="anim-item font-display text-[clamp(2.5rem,7vw,4.5rem)] font-bold text-gold tracking-[0.12em] mb-3" style={{ textShadow: '0 0 30px rgba(212,175,55,0.4)' }}>TIGA MIM</div>
+            <div ref={slide0Ref} className="absolute inset-0 flex flex-col items-center justify-center p-8 landscape:p-4 text-center pointer-events-none text-white">
+                <div className="anim-item text-gold font-serif text-[clamp(1.3rem,4vw,2rem)] landscape:text-[clamp(1rem,3vw,1.5rem)] mb-3 landscape:mb-1" style={{ textShadow: '0 0 24px rgba(212,175,55,0.4)' }}>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+                <div className="anim-item font-display text-[clamp(2.5rem,7vw,4.5rem)] landscape:text-[clamp(1.8rem,5vw,3rem)] font-bold tracking-[0.12em]" style={{ textShadow: '0 0 30px rgba(212,175,55,0.3)' }}>PETA MUKA</div>
+                <div className="anim-item font-display text-[clamp(2.5rem,7vw,4.5rem)] landscape:text-[clamp(1.8rem,5vw,3rem)] font-bold text-gold tracking-[0.12em] mb-3 landscape:mb-1" style={{ textShadow: '0 0 30px rgba(212,175,55,0.4)' }}>TIGA MIM</div>
                 <div className="anim-item text-white/60 text-[clamp(0.85rem,2vw,1.1rem)] tracking-[0.2em] font-light">PANDUAN SOLAT MUSAFIR: JAMAK &amp; QASAR</div>
             </div>
 
             {/* ---------------- SLIDE 1: TIGA MIM EXACT CLONE ---------------- */}
-            <div ref={slide1Ref} className="absolute inset-0 flex flex-col items-center justify-center bg-[#f0faf7] p-8 text-black opacity-0 pointer-events-none">
+            <div ref={slide1Ref} className="absolute inset-0 flex flex-col items-center justify-center bg-[#f0faf7] p-8 landscape:p-4 text-black opacity-0 pointer-events-none">
                 <div className="mim-hdr text-center">
-                    <h2 className="text-5xl sm:text-6xl font-display font-bold text-teal mb-4">3 MIM</h2>
-                    <p className="text-xl text-gray-600 font-display">Tiga Kategori Perjalanan</p>
-                    <div className="flex justify-center mt-6"><div className="w-16 h-1 bg-gold rounded-full" /></div>
+                    <h2 className="text-5xl sm:text-6xl landscape:text-3xl font-display font-bold text-teal mb-4 landscape:mb-2">3 MIM</h2>
+                    <p className="text-xl landscape:text-base text-gray-600 font-display">Tiga Kategori Perjalanan</p>
+                    <div className="flex justify-center mt-6 landscape:mt-2"><div className="w-16 h-1 bg-gold rounded-full" /></div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 w-full max-w-6xl" style={{ perspective: '1000px' }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 landscape:gap-4 mt-12 landscape:mt-4 w-full max-w-6xl landscape:max-w-4xl" style={{ perspective: '1000px' }}>
                     {[
                         { id: 'mastautin', title: 'MASTAUTIN', sub: 'Tempat Tinggal Tetap', desc: 'Kediaman kekal seseorang yang menjadi pusat kehidupan seharian.', icon: <Home className="w-8 h-8 text-white" /> },
                         { id: 'mukim', title: 'MUKIM', sub: 'Menetap Sementara', desc: 'Tinggal di sesuatu tempat lebih dari tiga hari tanpa niat menetap kekal.', icon: <MapPin className="w-8 h-8 text-white" /> },
                         { id: 'musafir', title: 'MUSAFIR', sub: 'Dalam Perjalanan', desc: 'Seseorang yang melakukan perjalanan melebihi 81 kilometer.', icon: <Car className="w-8 h-8 text-white" /> },
                     ].map((c) => (
-                        <div key={c.id} className="mim-card relative bg-white rounded-2xl shadow-card p-6 sm:p-8 flex flex-col items-center justify-center text-center">
-                            <div className="rounded-full bg-teal w-16 h-16 flex items-center justify-center mb-4">{c.icon}</div>
-                            <h3 className="text-xl sm:text-2xl font-display font-bold text-teal mb-2">{c.title}</h3>
-                            <p className="text-gold font-medium mb-4 text-sm sm:text-base">{c.sub}</p>
-                            <p className="text-gray-600 text-sm leading-relaxed hidden sm:block">{c.desc}</p>
+                        <div key={c.id} className="mim-card relative bg-white rounded-2xl shadow-card p-6 sm:p-8 landscape:p-4 flex flex-col items-center justify-center text-center">
+                            <div className="rounded-full bg-teal w-16 h-16 landscape:w-10 landscape:h-10 flex items-center justify-center mb-4 landscape:mb-2">{c.icon}</div>
+                            <h3 className="text-xl sm:text-2xl landscape:text-lg font-display font-bold text-teal mb-2 landscape:mb-1">{c.title}</h3>
+                            <p className="text-gold font-medium mb-4 landscape:mb-1 text-sm sm:text-base landscape:text-xs">{c.sub}</p>
+                            <p className="text-gray-600 text-sm leading-relaxed hidden sm:block landscape:text-xs">{c.desc}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
             {/* ---------------- SLIDE 1A: MASTAUTIN EXACT CLONE ---------------- */}
-            <div ref={slide1MastautinRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 text-black opacity-0 pointer-events-none" style={{ backgroundColor: '#f0faf7' }}>
+            <div ref={slide1MastautinRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 landscape:p-3 text-black opacity-0 pointer-events-none" style={{ backgroundColor: '#f0faf7' }}>
                 <audio ref={audioMastautinRef} src={`${import.meta.env.BASE_URL}mastautin.mp4`} preload="auto" />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     {[...Array(3)].map((_, i) => (
                         <div key={i} className="concentric-circle absolute rounded-full border-2 border-teal/20" style={{ width: `${300 + i * 150}px`, height: `${300 + i * 150}px` }} />
                     ))}
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl w-full z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 landscape:gap-6 items-center max-w-6xl w-full z-10">
                     <div className="mas-img relative flex justify-center">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md">
-                            <img src={`${import.meta.env.BASE_URL}mastautin-illustration.jpg`} alt="Mastautin" className="w-full h-auto" />
+                        <div className="relative rounded-3xl landscape:rounded-2xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md landscape:max-h-[45vh]">
+                            <img src={`${import.meta.env.BASE_URL}mastautin-illustration.jpg`} alt="Mastautin" className="w-full h-auto landscape:max-h-[40vh] landscape:object-cover" />
                         </div>
                     </div>
-                    <div className="text-center lg:text-left">
+                    <div className="text-center lg:text-left landscape:text-left">
                         <div className="mas-hdr">
-                            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-teal mb-2 lg:mb-4">MASTAUTIN</h2>
-                            <p className="text-lg sm:text-xl text-gold font-display mb-4 lg:mb-8">Tempat Tinggal Tetap</p>
+                            <h2 className="text-4xl sm:text-5xl md:text-7xl landscape:text-3xl font-display font-bold text-teal mb-2 lg:mb-4 landscape:mb-1">MASTAUTIN</h2>
+                            <p className="text-lg sm:text-xl landscape:text-base text-gold font-display mb-4 lg:mb-8 landscape:mb-2">Tempat Tinggal Tetap</p>
                         </div>
                         <div className="mas-desc">
-                            <p className="text-base sm:text-xl text-gray-700 leading-relaxed mb-6 lg:mb-8">Mastautin ialah <span className="font-semibold text-teal">tempat tinggal tetap</span> seseorang yang menjadi pusat kehidupan dan aktiviti harian.</p>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                                <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-card"><Building2 className="w-5 h-5 text-teal" /><span className="text-gray-700 font-medium text-sm sm:text-base">Rumah sendiri</span></div>
-                                <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-card"><Briefcase className="w-5 h-5 text-teal" /><span className="text-gray-700 font-medium text-sm sm:text-base">Tempat kerja tetap</span></div>
+                            <p className="text-base sm:text-xl landscape:text-sm text-gray-700 leading-relaxed mb-6 lg:mb-8 landscape:mb-3">Mastautin ialah <span className="font-semibold text-teal">tempat tinggal tetap</span> seseorang yang menjadi pusat kehidupan dan aktiviti harian.</p>
+                            <div className="flex flex-wrap justify-center lg:justify-start landscape:justify-start gap-4 landscape:gap-2">
+                                <div className="flex items-center gap-2 bg-white px-4 py-3 landscape:px-3 landscape:py-2 rounded-xl shadow-card"><Building2 className="w-5 h-5 text-teal" /><span className="text-gray-700 font-medium text-sm sm:text-base landscape:text-xs">Rumah sendiri</span></div>
+                                <div className="flex items-center gap-2 bg-white px-4 py-3 landscape:px-3 landscape:py-2 rounded-xl shadow-card"><Briefcase className="w-5 h-5 text-teal" /><span className="text-gray-700 font-medium text-sm sm:text-base landscape:text-xs">Tempat kerja tetap</span></div>
                             </div>
                         </div>
                     </div>
@@ -438,54 +438,54 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
             </div>
 
             {/* ---------------- SLIDE 1B: MUKIM EXACT CLONE ---------------- */}
-            <div ref={slide1MukimRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 text-black opacity-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f0faf7 100%)' }}>
+            <div ref={slide1MukimRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 landscape:p-3 text-black opacity-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f0faf7 100%)' }}>
                 <audio ref={audioMukimRef} src={`${import.meta.env.BASE_URL}mukim.mp4`} preload="auto" />
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl w-full z-10">
-                    <div className="muk-hdr order-2 lg:order-1 text-center lg:text-left">
-                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-teal mb-2 lg:mb-4">MUKIM</h2>
-                        <p className="text-lg sm:text-xl text-gold font-display mb-4 lg:mb-8">Tinggal Sementara</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 landscape:gap-6 items-center max-w-6xl w-full z-10">
+                    <div className="muk-hdr order-2 md:order-1 text-center md:text-left landscape:text-left">
+                        <h2 className="text-4xl sm:text-5xl md:text-7xl landscape:text-3xl font-display font-bold text-teal mb-2 lg:mb-4 landscape:mb-1">MUKIM</h2>
+                        <p className="text-lg sm:text-xl landscape:text-base text-gold font-display mb-4 lg:mb-8 landscape:mb-2">Tinggal Sementara</p>
                         <div className="muk-desc">
-                            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 lg:mb-8">Mukim bermaksud tinggal dan menetap di sesuatu tempat <span className="font-semibold text-teal">lebih dari tiga hari</span>, tetapi tidak berniat untuk menjadikannya tempat tinggal tetap selamanya.</p>
-                            <div className="inline-flex items-center gap-4 bg-gradient-to-r from-teal to-teal-light rounded-2xl p-4 sm:p-6 shadow-glow-teal text-left">
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 flex items-center justify-center"><span className="text-3xl sm:text-5xl font-display font-bold text-white">3</span></div>
-                                <div><p className="text-2xl sm:text-3xl font-display font-bold text-white">&gt; 3 Hari</p><p className="text-white/80 text-xs sm:text-sm">Tempoh minimum untuk dianggap mukim</p></div>
+                            <p className="text-base sm:text-lg landscape:text-sm text-gray-700 leading-relaxed mb-6 lg:mb-8 landscape:mb-3">Mukim bermaksud tinggal dan menetap di sesuatu tempat <span className="font-semibold text-teal">lebih dari tiga hari</span>, tetapi tidak berniat untuk menjadikannya tempat tinggal tetap selamanya.</p>
+                            <div className="inline-flex items-center gap-4 landscape:gap-3 bg-gradient-to-r from-teal to-teal-light rounded-2xl p-4 sm:p-6 landscape:p-3 shadow-glow-teal text-left">
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 landscape:w-12 landscape:h-12 rounded-full bg-white/20 flex items-center justify-center"><span className="text-3xl sm:text-5xl landscape:text-2xl font-display font-bold text-white">3</span></div>
+                                <div><p className="text-2xl sm:text-3xl landscape:text-xl font-display font-bold text-white">&gt; 3 Hari</p><p className="text-white/80 text-xs sm:text-sm landscape:text-xs">Tempoh minimum untuk dianggap mukim</p></div>
                             </div>
                         </div>
                     </div>
-                    <div className="muk-img order-1 lg:order-2 relative flex justify-center">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md">
-                            <img src={`${import.meta.env.BASE_URL}mukim-illustration.jpg`} alt="Mukim" className="w-full h-auto" />
+                    <div className="muk-img order-1 md:order-2 relative flex justify-center">
+                        <div className="relative rounded-3xl landscape:rounded-2xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md landscape:max-h-[45vh]">
+                            <img src={`${import.meta.env.BASE_URL}mukim-illustration.jpg`} alt="Mukim" className="w-full h-auto landscape:max-h-[40vh] landscape:object-cover" />
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* ---------------- SLIDE 1C: MUSAFIR EXACT CLONE ---------------- */}
-            <div ref={slide1MusafirRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 text-black opacity-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)' }}>
+            <div ref={slide1MusafirRef} className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 landscape:p-3 text-black opacity-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)' }}>
                 <audio ref={audioMusafirRef} src={`${import.meta.env.BASE_URL}musafir.mp4`} preload="auto" />
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl w-full z-10">
-                    <div className="mus-hdr order-2 lg:order-1 text-center lg:text-left">
-                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-teal mb-2 lg:mb-4">MUSAFIR</h2>
-                        <p className="text-lg sm:text-xl text-gold font-display mb-4 lg:mb-8">Dalam Perjalanan</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 landscape:gap-6 items-center max-w-6xl w-full z-10">
+                    <div className="mus-hdr order-2 md:order-1 text-center md:text-left landscape:text-left">
+                        <h2 className="text-4xl sm:text-5xl md:text-7xl landscape:text-3xl font-display font-bold text-teal mb-2 lg:mb-4 landscape:mb-1">MUSAFIR</h2>
+                        <p className="text-lg sm:text-xl landscape:text-base text-gold font-display mb-4 lg:mb-8 landscape:mb-2">Dalam Perjalanan</p>
                         <div className="mus-desc">
-                            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 lg:mb-8">Musafir ialah seseorang yang melakukan perjalanan melebihi <span className="font-semibold text-teal">dua marhalah</span> atau <span className="font-semibold text-teal">81 kilometer</span>.</p>
-                            <div className="inline-flex items-center gap-4 sm:gap-6 bg-gradient-to-r from-gold to-gold-light rounded-2xl p-4 sm:p-6 shadow-glow-gold mb-8 text-left">
-                                <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-white/30 flex items-center justify-center"><Navigation className="w-8 h-8 sm:w-12 sm:h-12 text-white" /></div>
-                                <div><div className="flex items-baseline gap-2"><p className="text-3xl sm:text-5xl font-display font-bold text-white">≥ 81</p><p className="text-white/90 text-2xl font-bold font-display tracking-wide animate-km-glow">KM</p></div><p className="text-white/70 text-xs sm:text-sm mt-1">Jarak minimum untuk menjadi musafir</p></div>
+                            <p className="text-base sm:text-lg landscape:text-sm text-gray-700 leading-relaxed mb-6 lg:mb-8 landscape:mb-3">Musafir ialah seseorang yang melakukan perjalanan melebihi <span className="font-semibold text-teal">dua marhalah</span> atau <span className="font-semibold text-teal">81 kilometer</span>.</p>
+                            <div className="inline-flex items-center gap-4 sm:gap-6 landscape:gap-3 bg-gradient-to-r from-gold to-gold-light rounded-2xl p-4 sm:p-6 landscape:p-3 shadow-glow-gold mb-8 landscape:mb-3 text-left">
+                                <div className="w-16 h-16 sm:w-24 sm:h-24 landscape:w-12 landscape:h-12 rounded-full bg-white/30 flex items-center justify-center"><Navigation className="w-8 h-8 sm:w-12 sm:h-12 landscape:w-6 landscape:h-6 text-white" /></div>
+                                <div><div className="flex items-baseline gap-2"><p className="text-3xl sm:text-5xl landscape:text-2xl font-display font-bold text-white">≥ 81</p><p className="text-white/90 text-2xl landscape:text-lg font-bold font-display tracking-wide animate-km-glow">KM</p></div><p className="text-white/70 text-xs sm:text-sm landscape:text-xs mt-1">Jarak minimum untuk menjadi musafir</p></div>
                             </div>
                         </div>
                     </div>
-                    <div className="mus-img order-1 lg:order-2 relative flex justify-center flex-col">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md">
-                            <img src={`${import.meta.env.BASE_URL}musafir-illustration.jpg`} alt="Musafir" className="w-full h-auto" />
+                    <div className="mus-img order-1 md:order-2 relative flex justify-center flex-col">
+                        <div className="relative rounded-3xl landscape:rounded-2xl overflow-hidden shadow-2xl max-w-sm lg:max-w-md landscape:max-h-[45vh]">
+                            <img src={`${import.meta.env.BASE_URL}musafir-illustration.jpg`} alt="Musafir" className="w-full h-auto landscape:max-h-[40vh] landscape:object-cover" />
                         </div>
                     </div>
                 </div>
             </div>\n\n            {/* ---------------- SLIDE 2: TEMPOH EXACT CLONE ---------------- */}
-            <div ref={slide2Ref} className="absolute inset-0 flex items-center justify-center bg-[#f0faf7] p-8 text-black opacity-0 pointer-events-none">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full">
+            <div ref={slide2Ref} className="absolute inset-0 flex items-center justify-center bg-[#f0faf7] p-8 landscape:p-4 text-black opacity-0 pointer-events-none">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 landscape:gap-6 max-w-6xl w-full">
                     {/* Calendar side */}
-                    <div className="tempoh-cal bg-white rounded-3xl p-6 sm:p-8 shadow-card">
+                    <div className="tempoh-cal bg-white rounded-3xl landscape:rounded-2xl p-6 sm:p-8 landscape:p-3 shadow-card">
                         <div className="flex items-center justify-between mb-6">
                             <button disabled className="p-2 bg-gray-50 rounded-lg"><ArrowLeft className="w-5 h-5 text-gray-400" /></button>
                             <div className="flex items-center gap-2">
@@ -494,18 +494,18 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
                             </div>
                             <button disabled className="p-2 bg-gray-50 rounded-lg"><ArrowRight className="w-5 h-5 text-gray-400" /></button>
                         </div>
-                        <div className="grid grid-cols-7 gap-4 mb-2">
+                        <div className="grid grid-cols-7 gap-4 landscape:gap-1 mb-2">
                             {['Ahd', 'Isn', 'Sel', 'Rab', 'Kha', 'Jum', 'Sab'].map((d) => (
-                                <div key={d} className="calendar-day text-center text-xs text-gray-500 font-medium py-2">{d}</div>
+                                <div key={d} className="calendar-day text-center text-xs text-gray-500 font-medium py-2 landscape:py-0.5">{d}</div>
                             ))}
                         </div>
-                        <div className="grid grid-cols-7 gap-4">
+                        <div className="grid grid-cols-7 gap-4 landscape:gap-1">
                             <div className="calendar-day" /><div className="calendar-day" /><div className="calendar-day" />
                             {calDays.map(i => {
                                 const isHighlight = i >= 4 && i <= 6;
                                 const isTravel = i === 3 || i === 7;
                                 return (
-                                    <div key={i} className={`calendar-day relative flex items-center justify-center w-10 h-10 mx-auto rounded-lg text-sm font-medium ${isHighlight ? 'day-highlighted bg-teal text-white' : isTravel ? 'bg-teal/10 text-teal font-bold' : 'bg-gray-50 text-gray-700'
+                                    <div key={i} className={`calendar-day relative flex items-center justify-center w-10 h-10 landscape:w-7 landscape:h-7 mx-auto rounded-lg text-sm landscape:text-xs font-medium ${isHighlight ? 'day-highlighted bg-teal text-white' : isTravel ? 'bg-teal/10 text-teal font-bold' : 'bg-gray-50 text-gray-700'
                                         }`}>
                                         {i}
                                         {isTravel && <span className="absolute -bottom-4 text-[10px] text-teal font-bold">{i === 3 ? 'Pergi' : 'Balik'}</span>}
@@ -521,10 +521,10 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
                     {/* Text side */}
                     <div>
                         <div className="tempoh-hdr">
-                            <h2 className="text-4xl sm:text-5xl font-display font-bold text-teal mb-4">TEMPOH JAMAK<span className="block text-gold">&amp; QASAR</span></h2>
-                            <p className="text-xl text-gray-600 font-display mb-8">Bilakah Boleh Dilakukan?</p>
+                            <h2 className="text-4xl sm:text-5xl landscape:text-2xl font-display font-bold text-teal mb-4 landscape:mb-2">TEMPOH JAMAK<span className="block text-gold">&amp; QASAR</span></h2>
+                            <p className="text-xl landscape:text-base text-gray-600 font-display mb-8 landscape:mb-3">Bilakah Boleh Dilakukan?</p>
                         </div>
-                        <div className="tempoh-desc text-lg text-gray-700 leading-relaxed mb-8">
+                        <div className="tempoh-desc text-lg landscape:text-sm text-gray-700 leading-relaxed mb-8 landscape:mb-3">
                             Tempoh dibolehkan melakukan qasar dan jamak untuk musafir ialah <span className="font-semibold text-teal">tiga hari</span> tidak termasuk perjalanan pergi dan balik.
                         </div>
                     </div>
@@ -532,31 +532,31 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
             </div>
 
             {/* ---------------- SLIDE 3/4/5: SITUASI PERJALANAN EXACT CLONE ---------------- */}
-            <div ref={slide345Ref} className="absolute inset-0 flex flex-col items-center justify-start bg-[#f0faf7] pt-4 pb-2 px-4 text-black opacity-0 pointer-events-none overflow-hidden">
+            <div ref={slide345Ref} className="absolute inset-0 flex flex-col items-center justify-start bg-[#f0faf7] pt-4 landscape:pt-1 pb-2 landscape:pb-1 px-4 text-black opacity-0 pointer-events-none overflow-hidden">
 
-                <div className="sit-hdr text-center mb-6 shrink-0 mt-4">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-teal mb-3">SITUASI PERJALANAN</h2>
-                    <p className="text-xs sm:text-sm text-gray-600 font-display max-w-xl mx-auto mb-4">
+                <div className="sit-hdr text-center mb-6 landscape:mb-1 shrink-0 mt-4 landscape:mt-1">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl landscape:text-2xl font-display font-bold text-teal mb-3 landscape:mb-1">SITUASI PERJALANAN</h2>
+                    <p className="text-xs sm:text-sm landscape:text-[10px] text-gray-600 font-display max-w-xl mx-auto mb-4 landscape:mb-1">
                         Tiga situasi perjalanan yang memerlukan pemahaman tentang hukum solat
                     </p>
                     <div className="flex justify-center"><div className="w-20 h-1 bg-gold rounded-full" /></div>
                 </div>
 
                 {/* Action Buttons Clone */}
-                <div className="flex flex-wrap justify-center gap-3 mb-6 shrink-0">
-                    <button ref={btn1Ref} className="px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-2 bg-white text-teal shadow-card"><Home className="w-4 h-4" />Mastautin → Mukim</button>
-                    <button ref={btn2Ref} className="px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-2 bg-white text-teal shadow-card"><Navigation className="w-4 h-4" />Mastautin → Musafir → Mukim</button>
-                    <button ref={btn3Ref} className="px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-2 bg-white text-teal shadow-card"><MapPin className="w-4 h-4" />Musafir → Mastautin</button>
+                <div className="flex flex-wrap justify-center gap-3 landscape:gap-1.5 mb-6 landscape:mb-2 shrink-0">
+                    <button ref={btn1Ref} className="px-5 py-2.5 landscape:px-3 landscape:py-1.5 rounded-full text-xs landscape:text-[10px] font-semibold flex items-center gap-2 landscape:gap-1 bg-white text-teal shadow-card"><Home className="w-4 h-4 landscape:w-3 landscape:h-3" />Mastautin → Mukim</button>
+                    <button ref={btn2Ref} className="px-5 py-2.5 landscape:px-3 landscape:py-1.5 rounded-full text-xs landscape:text-[10px] font-semibold flex items-center gap-2 landscape:gap-1 bg-white text-teal shadow-card"><Navigation className="w-4 h-4 landscape:w-3 landscape:h-3" />Mastautin → Musafir → Mukim</button>
+                    <button ref={btn3Ref} className="px-5 py-2.5 landscape:px-3 landscape:py-1.5 rounded-full text-xs landscape:text-[10px] font-semibold flex items-center gap-2 landscape:gap-1 bg-white text-teal shadow-card"><MapPin className="w-4 h-4 landscape:w-3 landscape:h-3" />Musafir → Mastautin</button>
                 </div>
 
                 {/* Status Indicator */}
-                <div className="text-center mb-4 h-6 shrink-0">
-                    {sitStatusText && <span className="inline-block px-4 py-1 bg-teal/10 text-teal font-semibold rounded-full text-xs">{sitStatusText}</span>}
+                <div className="text-center mb-4 landscape:mb-1 h-6 landscape:h-5 shrink-0">
+                    {sitStatusText && <span className="inline-block px-4 py-1 landscape:px-2 landscape:py-0.5 bg-teal/10 text-teal font-semibold rounded-full text-xs landscape:text-[10px]">{sitStatusText}</span>}
                 </div>
 
                 {/* Description */}
-                <div className="text-center mb-4 shrink-0">
-                    <div className="inline-block bg-white rounded-xl px-5 py-3 shadow-card border border-teal/10 max-w-2xl">
+                <div className="text-center mb-4 landscape:mb-1 shrink-0">
+                    <div className="inline-block bg-white rounded-xl px-5 py-3 landscape:px-3 landscape:py-1.5 shadow-card border border-teal/10 max-w-2xl">
                         <p className="text-sm text-gray-700">
                             {sitDescText ? (
                                 sitDescText.includes(': ') ? (
@@ -574,7 +574,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
 
                 {/* The Exact SVG Map */}
                 <div className="sit-map relative mx-auto w-full flex-1 min-h-0" style={{ maxHeight: '55vh' }}>
-                    <div className="relative w-full h-full max-w-xl mx-auto" style={{ aspectRatio: '1/1' }}>
+                    <div className="relative w-full h-full max-w-xl landscape:max-w-sm mx-auto" style={{ aspectRatio: '1/1' }}>
                         {/* Main Circle Background */}
                         <div className="absolute inset-[18%] rounded-full bg-gradient-to-br from-teal/5 to-teal/10 border-2 border-dashed border-teal/20" />
 
@@ -694,19 +694,19 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
                 {/* Animated Path Overlay */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M 10 50 Q 30 20, 50 50 T 90 50" fill="none" stroke="#d4a574" strokeWidth="0.3" vectorEffect="non-scaling-stroke" /></svg>
                 <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto text-white">
-                    <div className="flex justify-center mb-6"><Sparkles className="w-10 h-10 text-[#d4af37]" /></div>
-                    <div className="mb-8" style={{ perspective: '1000px' }}>
-                        <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-white mb-4">
+                    <div className="flex justify-center mb-6 landscape:mb-3"><Sparkles className="w-10 h-10 landscape:w-7 landscape:h-7 text-[#d4af37]" /></div>
+                    <div className="mb-8 landscape:mb-4" style={{ perspective: '1000px' }}>
+                        <h2 className="text-5xl sm:text-6xl md:text-7xl landscape:text-4xl font-display font-bold text-white mb-4 landscape:mb-2">
                             <span className="cl-word inline-block">Semoga</span> <span className="cl-word inline-block text-[#d4af37]">Bermanfaat</span>
                         </h2>
-                        <h3 className="text-4xl sm:text-5xl font-display font-bold text-white/90">
+                        <h3 className="text-4xl sm:text-5xl landscape:text-3xl font-display font-bold text-white/90">
                             <span className="cl-word inline-block">Terima</span> <span className="cl-word inline-block">Kasih</span>
                         </h3>
                     </div>
-                    <div className="cl-emoji flex justify-center mb-8">
-                        <div className="w-20 h-20 bg-gradient-to-br from-[#d4af37] to-[#fef08a] rounded-full flex items-center justify-center"><span className="text-4xl">😊</span></div>
+                    <div className="cl-emoji flex justify-center mb-8 landscape:mb-4">
+                        <div className="w-20 h-20 landscape:w-14 landscape:h-14 bg-gradient-to-br from-[#d4af37] to-[#fef08a] rounded-full flex items-center justify-center"><span className="text-4xl landscape:text-2xl">😊</span></div>
                     </div>
-                    <div className="mt-16 pt-8 border-t border-white/10 flex items-center justify-center gap-2 text-white/50 text-sm">
+                    <div className="mt-16 landscape:mt-6 pt-8 landscape:pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-white/50 text-sm">
                         <Heart className="w-4 h-4 text-[#d4af37]" /><span>Dibuat dengan kasih sayang untuk umat Islam</span>
                     </div>
                 </div>
@@ -715,7 +715,7 @@ export default function AnimationPreloader({ isPlaying, onComplete }: AnimationP
             {/* LOMPAT SKIP COMPONENT */}
             <button
                 onClick={handleSkip}
-                className="fixed bottom-7 right-9 bg-white border-2 border-gold text-gold font-bold text-sm px-6 py-2.5 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.15)] hover:bg-teal hover:border-teal hover:text-white hover:-translate-y-1 transition-all duration-300 z-[100000] tracking-widest"
+                className="fixed bottom-7 right-9 landscape:bottom-3 landscape:right-4 bg-white border-2 border-gold text-gold font-bold text-sm landscape:text-xs px-6 py-2.5 landscape:px-4 landscape:py-1.5 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.15)] hover:bg-teal hover:border-teal hover:text-white hover:-translate-y-1 transition-all duration-300 z-[100000] tracking-widest"
             >
                 HENTIKAN ANIMASI
             </button>

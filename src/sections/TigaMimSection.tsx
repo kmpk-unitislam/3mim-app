@@ -56,7 +56,7 @@ function MimCard({ id, icon, title, subtitle, description, delay, isActive, onCl
       className={`tab-card relative bg-white rounded-2xl shadow-card transition-all duration-400 cursor-pointer overflow-hidden ${isActive ? 'ring-2 ring-teal shadow-glow-teal' : 'hover:-translate-y-2 hover:shadow-card-hover'
         }`}
     >
-      <div className="tab-card-content p-8 sm:p-10 flex flex-col items-center justify-center h-full">
+      <div className="tab-card-content p-8 sm:p-10 landscape:p-5 flex flex-col items-center justify-center h-full">
         {/* Icon */}
         <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-teal flex items-center justify-center mb-6 transition-all duration-500 ${isActive ? 'scale-110' : ''}`}>
           {icon}
@@ -144,7 +144,7 @@ export default function TigaMimSection() {
 
   return (
     <div id="tiga-mim-container" className="relative w-full bg-[#f0faf7]">
-      <div className="relative w-full min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="relative w-full min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 landscape:py-8">
         {/* Header Title */}
         <div className="w-full text-center">
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-teal mb-4">
@@ -159,7 +159,7 @@ export default function TigaMimSection() {
         </div>
 
         {/* Cards Container */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 perspective-1000" style={{ perspective: '1000px' }}>
+        <div className="mt-16 landscape:mt-6 grid grid-cols-1 md:grid-cols-3 gap-8 landscape:gap-4 perspective-1000" style={{ perspective: '1000px' }}>
           {cards.map((card, index) => (
             <MimCard
               key={card.id}

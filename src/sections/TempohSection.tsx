@@ -169,11 +169,11 @@ export default function TempohSection() {
     <section
       id="tempoh"
       ref={sectionRef}
-      className="relative min-h-screen flex items-center py-20"
+      className="relative min-h-screen flex items-center py-20 landscape:py-8"
       style={{ backgroundColor: '#f0faf7' }}
     >
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 landscape:gap-6 items-center">
           {/* Left Calendar */}
           <div ref={calendarRef} className="opacity-0">
             <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-card perspective-1000">
@@ -217,11 +217,11 @@ export default function TempohSection() {
           <div>
             {/* Title */}
             <div ref={titleRef} className="opacity-0">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-teal mb-4">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl landscape:text-3xl font-display font-bold text-teal mb-4 landscape:mb-2">
                 TEMPOH JAMAK
                 <span className="block text-gold">& QASAR</span>
               </h2>
-              <p className="text-xl text-gray-600 font-display mb-8">
+              <p className="text-xl landscape:text-base text-gray-600 font-display mb-8 landscape:mb-4">
                 Bilakah Boleh Dilakukan?
               </p>
             </div>

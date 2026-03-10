@@ -81,14 +81,14 @@ export default function QASection() {
     <section
       id="qa"
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center py-20 landscape:py-8 overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)',
       }}
     >
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 landscape:mb-6">
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-teal mb-4">
             SOALAN & JAWAPAN
           </h2>
@@ -119,7 +119,7 @@ export default function QASection() {
           >
             {/* Front: Question Box */}
             <div
-              className={`absolute inset-0 bg-gradient-to-br from-teal to-teal-light rounded-[2.5rem] p-8 sm:p-12 text-white shadow-glow-teal flex flex-col justify-center items-center text-center`}
+              className={`absolute inset-0 bg-gradient-to-br from-teal to-teal-light rounded-[2.5rem] p-8 sm:p-12 landscape:p-6 text-white shadow-glow-teal flex flex-col justify-center items-center text-center`}
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
@@ -134,7 +134,7 @@ export default function QASection() {
                 <p className="text-gold-light text-base lg:text-lg uppercase tracking-[0.2em] font-semibold mb-6">
                   Soalan
                 </p>
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight max-w-2xl mx-auto text-balance">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl landscape:text-2xl font-display font-bold leading-tight max-w-2xl mx-auto text-balance">
                   Bilakah seseorang boleh melaksanakan solat jamak dan qasar?
                 </h3>
               </div>
@@ -148,7 +148,7 @@ export default function QASection() {
             {/* Back: Answer Box */}
             {/* Relative to provide height to the parent card element */}
             <div
-              className={`relative w-full bg-white rounded-[2.5rem] p-8 sm:p-12 border-2 border-teal/20 shadow-xl flex flex-col justify-center`}
+              className={`relative w-full bg-white rounded-[2.5rem] p-8 sm:p-12 landscape:p-6 border-2 border-teal/20 shadow-xl flex flex-col justify-center`}
               style={{
                 backfaceVisibility: 'hidden',
                 WebkitBackfaceVisibility: 'hidden',
