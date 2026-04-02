@@ -174,25 +174,23 @@ export default function LandscapeOrientationBlocker() {
       <button 
         onClick={async () => {
           try {
-            if (document.documentElement.requestFullscreen) {
-              await document.documentElement.requestFullscreen();
+            // Try to lock orientation to landscape WITHOUT fullscreen
+            if ('orientation' in screen && 'lock' in screen.orientation) {
+              await (screen.orientation as any).lock('landscape').catch(() => {});
             }
-            setTimeout(async () => {
-              if ('orientation' in screen && 'lock' in screen.orientation) {
-                await (screen.orientation as any).lock('landscape').catch(() => {});
-              }
-              const metaViewport = document.querySelector('meta[name=viewport]');
-              if (metaViewport) {
-                const sw = window.screen.width;
-                const sh = window.screen.height;
-                const aspect = Math.max(sw, sh) / Math.min(sw, sh);
-                const targetLogicalHeight = 650;
-                const logicalWidth = Math.max(1280, Math.round(targetLogicalHeight * aspect));
-                metaViewport.setAttribute('content', `width=${logicalWidth}, user-scalable=no`);
-              }
-            }, 100);
+            // Adjust viewport for landscape
+            const metaViewport = document.querySelector('meta[name=viewport]');
+            if (metaViewport) {
+              const sw = window.screen.width;
+              const sh = window.screen.height;
+              const aspect = Math.max(sw, sh) / Math.min(sw, sh);
+              const targetLogicalHeight = 650;
+              const logicalWidth = Math.max(1280, Math.round(targetLogicalHeight * aspect));
+              metaViewport.setAttribute('content', `width=${logicalWidth}, user-scalable=no`);
+            }
           } catch (e) { 
-            console.error('Fullscreen failed:', e); 
+            // Orientation lock may not be supported without fullscreen on some browsers
+            console.warn('Orientation lock failed:', e); 
           }
         }}
         className="mt-4 px-6 py-2 bg-transparent border border-white/20 hover:bg-white/10 text-white/80 font-medium rounded-full transition-colors flex items-center gap-2 text-sm"
