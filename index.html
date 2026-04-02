@@ -2,10 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/3mim-app/manifest.json" />
+    <meta name="theme-color" content="#0d9488" />
+    <script>
+      (function() {
+        function setViewport() {
+          var isMobileDevice = /Mobi|Android/i.test(navigator.userAgent) || ('ontouchstart' in window && navigator.maxTouchPoints > 0 && window.innerWidth < 1024);
+          var metaViewport = document.querySelector('meta[name=viewport]');
+          if (!metaViewport) {
+            metaViewport = document.createElement('meta');
+            metaViewport.name = "viewport";
+            document.head.appendChild(metaViewport);
+          }
+          if (isMobileDevice) {
+            // Get physical dimensions (screen.width/height is more reliable for orientation independent physical pixels)
+            var w = window.outerWidth > 0 ? window.outerWidth : window.screen.width;
+            var h = window.outerHeight > 0 ? window.outerHeight : window.screen.height;
+            var shortEdge = Math.min(w, h);
+            var isTablet = shortEdge >= 600;
+            // Robust portrait detection
+            var isPortrait = false;
+            if (window.screen && window.screen.orientation && window.screen.orientation.type) {
+              isPortrait = window.screen.orientation.type.indexOf('portrait') !== -1;
+            } else {
+              isPortrait = window.innerHeight > window.innerWidth;
+            }
+
+            if (isTablet) {
+              // Tablets have enough height even in landscape (e.g. 768px). Leave as default responsive.
+              metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+            } else if (isPortrait) {
+              // For portrait phones, slight shrinkage
+              metaViewport.setAttribute('content', 'width=500, user-scalable=no');
+            } else {
+              // For landscape phones, force desktop-like aspect to shrink content
+              var maxDim = Math.max(w, h);
+              var minDim = Math.min(w, h);
+              var aspect = maxDim / minDim;
+              var targetLogicalHeight = 650;
+              var logicalWidth = Math.max(1280, Math.round(targetLogicalHeight * aspect));
+              metaViewport.setAttribute('content', 'width=' + logicalWidth + ', user-scalable=no');
+            }
+          } else {
+            metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+          }
+        }
+        setViewport();
+        window.addEventListener('resize', setTimeout.bind(null, setViewport, 200));
+        window.addEventListener('fullscreenchange', setTimeout.bind(null, setViewport, 300));
+        window.addEventListener('orientationchange', setTimeout.bind(null, setViewport, 300));
+      })();
+    </script>
     <title>Peta Muka - Tiga Mim</title>
-    <script type="module" crossorigin src="/3mim-app/assets/index-DwsHrCvF.js"></script>
-    <link rel="stylesheet" crossorigin href="/3mim-app/assets/index-BtXBwHlU.css">
+    <script type="module" crossorigin src="/3mim-app/assets/index-J9cvDZCR.js"></script>
+    <link rel="stylesheet" crossorigin href="/3mim-app/assets/index-ZAd12AyR.css">
   </head>
   <body>
     <div id="root"></div>
