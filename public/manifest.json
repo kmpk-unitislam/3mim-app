@@ -1,0 +1,10 @@
+{
+  "name": "3 MIM - Peta Muka",
+  "short_name": "3 MIM",
+  "start_url": ".",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0d9488",
+  "theme_color": "#0d9488",
+  "description": "Situasi Perjalanan Tiga Mim: Mastautin, Mukim, Musafir."
+}
